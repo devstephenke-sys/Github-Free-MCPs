@@ -1,4 +1,6 @@
-# github-cicd-mcp
+# Github-Free-MCPs
+
+Free GitHub CI/CD MCP server (`github-cicd-mcp` npm package name).
 
 [![CI](https://github.com/devstephenke-sys/Github-Free-MCPs/actions/workflows/ci.yml/badge.svg)](https://github.com/devstephenke-sys/Github-Free-MCPs/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/github-cicd-mcp.svg)](https://www.npmjs.com/package/github-cicd-mcp)

@@ -24,7 +24,7 @@ git init
 git add .
 git commit -m "Initial public release of GitHub CI/CD MCP"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/github-cicd-mcp.git
+git remote add origin https://github.com/devstephenke-sys/Github-Free-MCPs.git
 git push -u origin main
 ```
 
