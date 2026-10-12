@@ -1,0 +1,61 @@
+{
+  "name": "github-cicd-mcp",
+  "version": "1.1.0",
+  "description": "MCP server for GitHub REST & GraphQL — repos, commits, PRs, issues, Actions CI/CD, releases, billing, and local git",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "bin": {
+    "github-cicd-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build",
+    "verify": "npm run build && node scripts/count-tools.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github",
+    "ci-cd",
+    "devops",
+    "actions",
+    "pull-request"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devstephenke-sys/Github-Free-MCPs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devstephenke-sys/Github-Free-MCPs/issues"
+  },
+  "homepage": "https://github.com/devstephenke-sys/Github-Free-MCPs#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@octokit/graphql": "^9.0.3",
+    "@octokit/rest": "^22.0.1",
+    "simple-git": "^3.27.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

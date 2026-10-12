@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "github-cicd": {
+      "command": "node",
+      "args": ["C:/Users/DBTECH AFRICA/Desktop/Github MCPs/dist/index.js"],
+      "env": {
+        "GITHUB_TOKEN": "${env:GITHUB_TOKEN}"
+      }
+    }
+  }
+}
