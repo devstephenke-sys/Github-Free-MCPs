@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2026-10-13
+
+### Fixed
+- Resolved npm staging issue to enable public publishing
+
 ## [1.2.0] - 2026-10-13
 
 ### Added
