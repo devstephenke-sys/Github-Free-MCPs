@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-10-13
+
+### Added
+
+- SECURITY.md for responsible vulnerability disclosure
+- Security policy and best practices documentation
+- CI/CD verification script that counts registered tools (70 tools)
+- Enhanced documentation for public release
+
+### Changed
+
+- Updated package.json with correct repository URLs
+- Improved README with installation instructions for npm and source
+- Added npm publish configuration for public access
+
+### Security
+
+- Added security checklist and token scope recommendations
+- Documented safe authentication practices
+- Added dependency audit information
+
 ## [1.1.0] - 2026-03-23
 
 ### Added

@@ -1,6 +1,6 @@
-# Github-Free-MCPs
+# github-cicd-mcp
 
-Free GitHub CI/CD MCP server (`github-cicd-mcp` npm package name).
+GitHub CI/CD MCP server for Model Context Protocol.
 
 [![CI](https://github.com/devstephenke-sys/Github-Free-MCPs/actions/workflows/ci.yml/badge.svg)](https://github.com/devstephenke-sys/Github-Free-MCPs/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/github-cicd-mcp.svg)](https://www.npmjs.com/package/github-cicd-mcp)
@@ -12,40 +12,9 @@ Give your AI agent tools to manage repos, commits, pull requests, issues, GitHub
 
 ---
 
-## Use this folder on your machine (local build)
-
-```bash
-cd "Github MCPs"
-npm install
-npm run build
-npm run verify
-```
-
-Add to **Cursor → Settings → MCP** (merge into your config):
-
-```json
-{
-  "mcpServers": {
-    "github-cicd": {
-      "command": "node",
-      "args": ["C:/Users/DBTECH AFRICA/Desktop/Github MCPs/dist/index.js"],
-      "env": {
-        "GITHUB_TOKEN": "${env:GITHUB_TOKEN}"
-      }
-    }
-  }
-}
-```
-
-Set `GITHUB_TOKEN` in Windows environment variables (or your client’s secret store). Restart MCP after changes. See also `cursor-mcp.example.json`.
-
----
-
-## Install (for developers using your published package)
+## Install
 
 ### npm / npx (recommended)
-
-After the package is [published to npm](RELEASING.md):
 
 ```json
 {
@@ -88,6 +57,8 @@ Create a [personal access token](https://docs.github.com/en/authentication/keepi
 | Admin (branch protection, webhooks) | Admin access on the repo/org |
 
 Never commit tokens. Use environment variables only.
+
+⚠️ **Security**: See [SECURITY.md](SECURITY.md) for security policies and best practices.
 
 ---
 
@@ -151,13 +122,22 @@ Never commit tokens. Use environment variables only.
 
 ---
 
+## Development
+
+```bash
+npm install
+npm run build
+npm run verify
+```
+
+---
+
 ## Publish your own fork
 
 See **[RELEASING.md](RELEASING.md)** for:
-
-- Public GitHub repo setup  
-- npm publish (`npm publish --access public`)  
-- GitHub Releases and optional MCP directory listings  
+- Public GitHub repo setup
+- npm publish (`npm publish --access public`)
+- GitHub Releases and optional MCP directory listings
 
 ---
 
