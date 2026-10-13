@@ -1,6 +1,7 @@
 {
   "name": "@kinus/github-cicd-mcp",
   "version": "1.2.1",
+  "mcpName": "io.github.devstephenke-sys/github-cicd",
   "description": "MCP server for GitHub REST & GraphQL — repos, commits, PRs, issues, Actions CI/CD, releases, billing, and local git",
   "type": "module",
   "main": "./dist/index.js",
