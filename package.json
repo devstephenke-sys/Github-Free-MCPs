@@ -1,6 +1,6 @@
 {
   "name": "@kinus/github-cicd-mcp",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "mcpName": "io.github.devstephenke-sys/github-cicd",
   "description": "MCP server for GitHub REST & GraphQL — repos, commits, PRs, issues, Actions CI/CD, releases, billing, and local git",
   "type": "module",
@@ -51,7 +51,7 @@
     "@modelcontextprotocol/sdk": "^1.32.1",
     "@octokit/graphql": "^9.0.3",
     "@octokit/rest": "^22.0.1",
-    "simple-git": "^3.27.0",
+    "simple-git": "^4.0.2",
     "zod": "^3.24.0"
   },
   "devDependencies": {

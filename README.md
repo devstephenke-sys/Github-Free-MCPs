@@ -60,6 +60,8 @@ Never commit tokens. Use environment variables only.
 
 ⚠️ **Security**: See [SECURITY.md](SECURITY.md) for security policies and best practices.
 
+**Recent Security Update (v1.2.3)**: Updated `simple-git` to v4.0.2 to address critical security vulnerabilities (CVE-2026-102828, CVE-2026-102826, CVE-2026-102827, CVE-2026-6951).
+
 ---
 
 ## Tool reference

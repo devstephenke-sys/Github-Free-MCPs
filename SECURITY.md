@@ -58,10 +58,62 @@ This project uses the following dependencies, which are regularly audited:
 - `@modelcontextprotocol/sdk` - Official MCP SDK
 - `@octokit/rest` - GitHub REST API client
 - `@octokit/graphql` - GitHub GraphQL API client
-- `simple-git` - Local git operations
+- `simple-git` - Local git operations (updated to v4.0.2 to address CVE-2026-102828, CVE-2026-102826, CVE-2026-102827, CVE-2026-6951)
 - `zod` - Runtime type validation
 
 All dependencies are updated regularly, and automated security audits are run via CI.
+
+### Recent Security Updates
+
+**Version 1.2.3** (October 2026):
+- Updated `simple-git` from v3.27.0 to v4.0.2 to address critical security vulnerabilities:
+  - CVE-2026-102828: Unsafe-operation guard does not block trailer command configuration
+  - CVE-2026-102826: Command execution through unblocked Git configuration includes
+  - CVE-2026-102827: Unsafe-operations plugin bypass via git long-option abbreviation
+  - CVE-2026-6951: Remote Code Execution vulnerability
+
+### Write Operations and Token Scoping
+
+This MCP includes tools that can modify repository state:
+
+**High-impact operations** (use with caution):
+- `github_merge_pull_request` - Merges pull requests
+- `github_dispatch_workflow` - Triggers GitHub Actions workflows
+- `github_rerun_workflow` - Re-runs failed workflows
+- `github_create_release` - Creates GitHub releases
+- `github_create_commit` - Creates commits via GitHub API
+- `github_update_branch_protection` - Modifies branch protection rules
+- `github_delete_branch_protection` - Removes branch protection rules
+- `github_create_webhook` - Creates webhooks
+- `github_add_collaborator` - Adds repository collaborators
+
+**Recommendations**:
+- Use **fine-grained personal access tokens** with minimal required scopes
+- Consider using a separate token for read-only operations
+- Enable branch protection rules to require pull request reviews
+- Use organization-level policies for critical repositories
+- Regularly rotate your tokens
+
+### Input Validation
+
+The MCP server implements the following security measures:
+
+- All GitHub API requests use validated inputs via Zod schemas
+- Branch and ref names are sanitized before API calls
+- Token handling reads only from environment variables (never from user input)
+- No tokens are logged or echoed in error messages
+- Git arguments passed to simple-git are validated to prevent command injection
+
+### Code Transparency
+
+For complete security audits, all source code is available at:
+- https://github.com/devstephenke-sys/Github-Free-MCPs
+
+Key security-related files:
+- `src/lib/github.ts` - GitHub client and token handling
+- `src/lib/response.ts` - Response formatting
+- `src/lib/fields.ts` - Field validation
+- `src/tools/*` - Individual tool implementations
 
 ## Security Audits
 

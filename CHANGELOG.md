@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.3] - 2026-10-15
+
+### Security
+
+- **Critical**: Updated `simple-git` from v3.27.0 to v4.0.2 to address critical security vulnerabilities:
+  - CVE-2026-102828: Unsafe-operation guard does not block trailer command configuration
+  - CVE-2026-102826: Command execution through unblocked Git configuration includes
+  - CVE-2026-102827: Unsafe-operations plugin bypass via git long-option abbreviation
+  - CVE-2026-6951: Remote Code Execution vulnerability
+- Enhanced SECURITY.md with detailed security measures and write operation documentation
+- Added input validation and token handling transparency documentation
+- Updated dependency audit - no remaining vulnerabilities
+
+### Changed
+
+- Bumped version to 1.2.3
+- Updated npm package with security fixes
+
 ## [1.2.1] - 2026-10-13
 
 ### Fixed
