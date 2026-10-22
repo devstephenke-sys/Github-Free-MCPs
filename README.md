@@ -5,6 +5,7 @@ GitHub CI/CD MCP server for Model Context Protocol.
 [![CI](https://github.com/devstephenke-sys/Github-Free-MCPs/actions/workflows/ci.yml/badge.svg)](https://github.com/devstephenke-sys/Github-Free-MCPs/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@kinus/github-cicd-mcp.svg)](https://www.npmjs.com/package/@kinus/github-cicd-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub CI/CD MCP server](https://mcprush.com/badge/github-ci-cd-mcp/card.svg)](https://mcprush.com/to/github-ci-cd-mcp?ref=badge)
 
 **Model Context Protocol (MCP) server** for [GitHub REST](https://docs.github.com/en/rest) and [GraphQL](https://docs.github.com/en/graphql) — built for **CI/CD and DevOps** workflows in Cursor, Claude Desktop, and other MCP clients.
 
